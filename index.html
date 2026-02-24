@@ -24,6 +24,11 @@
             font-family: "Geist", sans-serif;
 
         }
+/* 
+        .jobs{
+
+        } */
+
     </style>
 
 
@@ -39,21 +44,21 @@
                 <div class="card-body">
 
                     <p>Total</p>
-                    <span id="total-count" class=" text-[#002C5C] font-bold text-xl">8</span>
+                    <span id="total-count" class=" total-job-count text-[#002C5C] font-bold text-xl">8</span>
                 </div>
             </div>
             <div class="card bg-base-100 shadow-sm">
                 <div class="card-body">
 
                     <p>Interview</p>
-                    <span class="interview-count-box text-green-400 font-bold text-xl">0</span>
+                    <span class="interview-count text-green-400 font-bold text-xl">0</span>
                 </div>
             </div>
             <div class="card bg-base-100 shadow-sm">
                 <div class="card-body">
 
                     <p>Rejected</p>
-                    <span class="text-red-500 font-bold text-xl">0</span>
+                    <span class="Rejected-count text-red-500 font-bold text-xl">0</span>
                 </div>
             </div>
         </div>
@@ -79,7 +84,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i    onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -88,8 +94,8 @@
             <p class="text-[#64748B] text-[14px]">Develop scalable algorithms and innovative software solutions for global users.</p>
         </div>
         <div>
-            <button id="interview-btn-1" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-1" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button  onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -102,7 +108,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -111,8 +118,8 @@
             <p class="text-[#64748B] text-[14px]">Design intuitive UI/UX for next-generation mobile devices and consumer electronics.</p>
         </div>
         <div>
-            <button id="interview-btn-2" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button  onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -125,7 +132,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -134,8 +142,8 @@
             <p class="text-[#64748B] text-[14px]">Build and maintain robust e-commerce infrastructures for millions of global merchants.</p>
         </div>
         <div>
-            <button id="interview-btn-3" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-3" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -148,7 +156,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -157,8 +166,8 @@
             <p class="text-[#64748B] text-[14px]">Analyze user listening patterns to optimize personalized music discovery and features.</p>
         </div>
         <div>
-            <button id="interview-btn-4" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-4" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -171,7 +180,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -180,8 +190,8 @@
             <p class="text-[#64748B] text-[14px]">Oversee global production lines and ensure efficient logistics and supply operations.</p>
         </div>
         <div>
-            <button id="interview-btn-5" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-5" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -194,7 +204,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -203,8 +214,8 @@
             <p class="text-[#64748B] text-[14px]">Plan and execute new features for local ride-sharing and logistics services.</p>
         </div>
         <div>
-            <button id="interview-btn-6" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-6" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -217,7 +228,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -226,8 +238,8 @@
             <p class="text-[#64748B] text-[14px]">Conduct user research to improve and simplify the global travel booking experience.</p>
         </div>
         <div>
-            <button id="interview-btn-7" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-7" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -240,7 +252,8 @@
 
             </div>
             <div class=" h-[34px] p-1.5 border rounded-2xl text-[#64748B]/50 cursor-pointer hover:text-blue-400">
-                <div class=""><i class="fa-regular fa-trash-can "></i></div>
+                
+                <div class=""><i   onclick="deleteSection(this)" class="fa-regular fa-trash-can "></i></div>
             </div>
         </div>
         <div class="space-y-5 mt-5 mb-5">
@@ -249,8 +262,8 @@
             <p class="text-[#64748B] text-[14px]">Develop advanced machine learning models for autonomous driving and autopilot systems.</p>
         </div>
         <div>
-            <button id="interview-btn-8" onclick="handleInterviewClick(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
-            <button class="btn btn-outline btn-error">Rejected</button>
+            <button id="interview-btn-8" onclick="clickButton(this)" class=" green-btn btn btn-outline btn-success">Interview</button>
+            <button onclick="clickRejectButton(this)" class="btn btn-outline btn-error">Rejected</button>
 
         </div>
 
@@ -262,13 +275,13 @@
     <div id="default-id"
         class="text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 max-w-[1110px] w-full mx-auto mt-4 py-[60px] hidden">
 
-        <img src="/jobs.png" alt="" class="mx-auto mt-10 mb-5">
+        <img src="./jobs.png" alt="" class="mx-auto mt-10 mb-5">
 
         <h2 class="text-2xl font-bold text-slate-800 mb-2">
             No jobs available
         </h2>
         <p class="text-gray-500 text-sm">
-            Check back soon for new job opportuniti
+            Check back soon for new job opportunities
         </p>
 
     </div>
