@@ -29,7 +29,7 @@
 
 </head>
 
-<body class=" bg-[#F8FAFC]">
+<body class=" bg-[#F8FAFC] px-1.5 sm:px-1.5 pb-2.5">
 
     <header class="max-w-[1110px] mx-auto pt-[60px]">
         <h1 class="text-[#002C5C] font-bold text-2xl mb-2.5">Job Application Tracker</h1>
@@ -39,7 +39,7 @@
                 <div class="card-body">
 
                     <p>Total</p>
-                    <span class=" text-[#002C5C] font-bold text-xl">8</span>
+                    <span id="total-count" class=" text-[#002C5C] font-bold text-xl">8</span>
                 </div>
             </div>
             <div class="card bg-base-100 shadow-sm">
@@ -67,7 +67,7 @@
     </div>
 
     <div class="max-w-[1110px] mx-auto pt-6 flex gap-2">
-        <button id="all-button" class="btn btn-primary ">All</button>
+        <button onclick="showCards()" id="all-button" class="btn btn-primary ">All</button>
         <button id="Interview-Filter-Btn" class="btn btn-soft btn-primary">Interview</button>
         <button id="Rejected-Filter-Btn" class="btn btn-soft btn-primary">Rejected</button>
     </div>

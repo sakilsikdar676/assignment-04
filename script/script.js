@@ -13,6 +13,11 @@ function handleInterviewClick(button) {
     </div>
     `;
     button.closest('.job-card').querySelector(".text-chang").className = " ";
+
+    const totalCount = document.getElementById("total-count");
+    const newTotal = Number(totalCount.innerText) - 1;
+    totalCount.innerText = newTotal;
+
     document.querySelector('.job-status').innerText = `${interviewCount}/${totalJobs} jobs`;
 
     const card = button.closest('.job-card');
@@ -48,7 +53,19 @@ document.getElementById("Interview-Filter-Btn").addEventListener("click", functi
 });
 
 
+function showCards() {
 
+    
+    
+    const allSection = document.querySelectorAll(".job-card");
+    allSection.forEach(section=>{
+        section.style.display= 'block';
+    })
+    document.getElementById("Interview-Filter-Btn").classList.add("btn-soft")
+
+    document.getElementById("all-button").classList.remove("btn-soft")
+    document.getElementById('default-id').classList.add('hidden');
+}
 
 
 
